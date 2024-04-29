@@ -1,0 +1,25 @@
+import csv
+
+List = [
+    {"Medicine": "Biogesic Tablet (Paracetamol)", "Price": "4.50Php"},
+    {"Medicine": "Biogesic Syrup (Paracetamol)", "Price": "128.25Php"},
+    {"Medicine": "Solmux Advance (Carbocisteine)", "Price": "13.00Php"},
+    {"Medicine": "Generic (Paracetamol)", "Price": "2.75Php"},
+    {"Medicine": "Diatabs (Loperamide)", "Price": "8.00Php"},
+    {"Medicine": "Generic (Carbocisteine)", "Price": "6.50Php"},
+    {"Medicine": "Generic (Loperamide)", "Price": "2.00Php"},
+    {"Medicine": "RiteMed (Amoxicillin)", "Price": "15.00Php"},
+    {"Medicine": "Generic (Amoxicillin)", "Price": "6.00Php"},
+    {"Medicine": "Centrum advance (Multivitamins)", "Price": "13.75Php"},
+    {"Medicine": "Generic (Multivitamins)", "Price": "1.00Php"},
+    {"Medicine": "Advil (Ibuprofren)", "Price": "8.75Php"},
+    {"Medicine": "Generic (Ibuprofren)", "Price": "4.50Php", },
+    {"Medicine": "Betadine (First-Aid)", "Price": "78.75Php", },
+    {"Medicine": "Agua-oxinada (First-Aid)", "Price": "81.25Php"},
+    {"Medicine": "Band-aid (First-aid)", "Price": "168.00Php"},
+]
+
+with open("ordering.csv", mode ="r") as csvfile:
+    fieldnames = List[0].keys()
+    reader = csv.DictReader(csvfile, fieldnames = fieldnames)
+    reader.readerrows(List)
